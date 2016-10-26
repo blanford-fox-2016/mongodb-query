@@ -113,3 +113,9 @@ db.prodi.find().sort({"nama": 1})
 DESC
 db.prodi.find().sort({"nama": -1})
 ```
+
+## Mencari data student dengan name
+
+```
+db.mahasiswa.find({nama:"<NAMA>"})
+```
