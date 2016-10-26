@@ -1,6 +1,7 @@
   # mongodb-query
 
   ### prodi
+
   key | type
   ------------ |
   kode | string
@@ -8,6 +9,7 @@
   jurusan | string
 
   ### mahasiswa
+
   key | type
   ------------ |
   nim | string
@@ -16,22 +18,31 @@
   prodi | string
 
   ### 1.  Jalankan mongo
+  
   ```
   mongo
   ```
+
   ### 2.  buat database akademik
+
   ```
   use academic
   ```
+
   ### 3.  membuat collection prodi
+
   ```
   db.createCollection("prodi")
   ```
+
   ### 4.  membuat collection mahasiswa
+
   ```
   db.createCollection("mahasiswa")
   ```
+
   ### 5.  menginput prodi
+
   ```
   db.prodi.insert(
         {
@@ -74,6 +85,7 @@ db.prodi.insert(
         }
     )
   ```
+
   ### 6.  menginput data mahasiswa
 
     ```
@@ -129,32 +141,43 @@ db.prodi.insert(
         }
     )
     ```
+
   ### 7. melihat isi collection mahasiswa
+
 
   ```
   db.mahasiswa.find().pretty()
   ```
 
   ### 8.  melihat daftar nama mahasiswa dengan data nama,alamat dari collection mahasiswa
+
   ```
   db.mahasiswa.find({}, {key:true,nama:true,alamat:true}).pretty()
   ```
+
   ### 9. melihat struktur collection mahasiswa
+
   ```
   var mahasiswa = db.mahasiswa.findOne();
   for (var key in mahasiswa) {
    print(key, typeof key);
   }
   ```
+
   ### 10.  menampilkan daftar mahasiswa secara terurut
+
   ```
   db.mahasiswa.find().sort( { "nama": 1 } ).pretty()
   ```
+
   ### 11. menampilkan daftar prodi berdasarkan nama secara terurut
+
   ```
   db.mahasiswa.find().sort( { "nama": 1 } ).pretty()
   ```
+
   ### 12. menampilkan nim,nama dan alamat dari daftar mahasiswa yang memiliki nim tertentu
+
   ```
   db.mahasiswa.find({"nim":"020806"}).pretty()
   ```
