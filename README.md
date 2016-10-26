@@ -1,5 +1,21 @@
 # mongodb-query
 
+## Collection prodi
+| Key        | Tipe      |
+| ---------- | --------- |
+| kode       | string    |
+| nama       | string    |
+| jurusan       | string    |
+
+## Collection mahasiswa
+| Key        | Tipe      |
+| ---------- | --------- |
+| id         | string    |
+| nim        | string    |
+| nama       | string    |
+| alamat     | string    |
+| prodi      | reference |
+
 ## 1 Membuat database akademik
 
 ```
