@@ -199,6 +199,12 @@ descending order by name
 db.faculty.find().sort({ name: 1})
 ```
 
+### 14. Find the specific name inside the student collection
+```
+ascending order by name
+db.student.find({name:"the_name_in_your_field"})
+```
+
 
 
 
