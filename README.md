@@ -130,7 +130,6 @@ for (var key in mahasiswa) {
  print(key, typeof key);
 }
 ```
-
 10.  menampilkan daftar mahasiswa secara terurut
 ```
 db.mahasiswa.find().sort( { "nama": 1 } ).pretty()
