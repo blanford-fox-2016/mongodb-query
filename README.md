@@ -85,3 +85,7 @@ db.prodi.find({},{ _id: false, nim: true, nama: true, alamat: true } ).sort({nam
 --DESC--
 db.prodi.find({},{ _id: false, nim: true, nama: true, alamat: true } ).sort({nama:-1})
 ```
+## 14. mencari data mahasiswa dengan nama
+```
+db.mahasiswa.find({nama:"toni"},{})
+```
